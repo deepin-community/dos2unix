@@ -1,0 +1,321 @@
+dos2unix (7.4.2-2) unstable; urgency=medium
+
+  * Upload to unstable
+
+ -- tony mancill <tmancill@debian.org>  Sun, 15 Aug 2021 21:05:16 -0700
+
+dos2unix (7.4.2-1) experimental; urgency=medium
+
+  * New upstream version 7.4.2
+    Updated translations
+  * Update Maintainer (Closes: #920104)
+  * Freshen debian/copyright
+  * Bump Standards-Version to 4.5.1
+  * Add debian/gbp.conf for debian/latest branch (DEP-14)
+  * Upload to experimental during the Bullseye freeze
+
+ -- tony mancill <tmancill@debian.org>  Fri, 02 Apr 2021 21:02:54 -0700
+
+dos2unix (7.4.1-1) unstable; urgency=medium
+
+  * New upstream version 7.4.1
+  * Bump Standards-Version to 4.5.0
+  * Use debhelper-compat 13
+  * Set Rules-Requires-Root: no in debian/control
+
+ -- tony mancill <tmancill@debian.org>  Sun, 05 Jul 2020 21:36:35 -0700
+
+dos2unix (7.4.0-2) unstable; urgency=medium
+
+  * Freshen packaging
+  * Use https URL for debian/watch
+  * Use SOURCE_DATE_EPOCH for POD date
+  * Bump Standards-Version to 4.4.0
+
+ -- tony mancill <tmancill@debian.org>  Sat, 13 Jul 2019 20:39:09 -0700
+
+dos2unix (7.4.0-1) unstable; urgency=medium
+
+  * New upstream version 7.4.0
+  * Update Vcs fields for migration from Alioth -> Salsa
+  * Migrate upstream-signing-key.pgp -> debian/upstream/signing-key.asc
+  * Change Section: from extra -> optional
+  * Use debhelper 11
+  * Bump Standards-Version to 4.1.4
+  * Drop Conflicts with ancient version of tofrodos (older than o-o-stable)
+  * Freshen debian/copyright dates
+
+ -- tony mancill <tmancill@debian.org>  Sun, 22 Apr 2018 15:15:35 -0700
+
+dos2unix (7.3.4-3) unstable; urgency=medium
+
+  * debian/control
+    - (Multi-Arch): foreign (Closes: #843907). Patch
+      thanks to Helmut Grohne <helmut@subdivi.de>.
+  * debian/copyright
+    - Update URLs.
+  * debian/rules
+    - Use dh_auto_build(1) instead of make(1) to enable cross building
+      (Closes: #843923). Patch thanks to Helmut Grohne
+      <helmut@subdivi.de>.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Fri, 11 Nov 2016 06:13:44 +0200
+
+dos2unix (7.3.4-2) unstable; urgency=medium
+
+  * debian/control
+    - (Build-Depends): Add locales-all. (Closes: #842053)
+  * debian/rules
+    - (overide_dh_auto_test): Drop adjustment for pbuilder.
+
+ -- tony mancill <tmancill@debian.org>  Tue, 25 Oct 2016 21:36:02 -0700
+
+dos2unix (7.3.4-1) unstable; urgency=medium
+
+  * New upstream release (Closes: 785115).
+  * debian/control
+    - (Build-Depends): Add po4a.
+    - (Homepage): Update URL.
+    - (Standards-Version): Update to 3.9.8.
+    - (Vcs-*): Update to anonscm.debian.org.
+  * debian/copyright
+    - (Source): Update URLs.
+  * debian/rules
+    - (overide_dh_auto_test): Add adjustment for pbuilder.
+  * debian/sources/options
+    - New file.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Mon, 24 Oct 2016 20:51:11 +0300
+
+dos2unix (6.0.4-1) unstable; urgency=low
+
+  * New upstream release.
+    - GPG signed source package
+  * debian/control
+    - (Standards-Version): Update to 3.9.5.
+    - (Vcs-*): Update to anonscm.debian.org.
+  * debian/source/include-binaries
+    - New.
+  * debian/upstream-signing-key.pgp
+    - New.
+  * debian/watch
+    - (pgpsigurlmangle): Add.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Fri, 03 Jan 2014 13:05:44 +0200
+
+dos2unix (6.0.3-1) unstable; urgency=low
+
+  * New upstream release.
+    - Support compiling with Microsoft Visual C.
+    - Display an error message if writing output fails.
+  * debian/control
+    - (Standards-Version): Update to 3.9.4.
+  * debian/copyright
+    - Update current year.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Sat, 26 Jan 2013 09:15:45 +0200
+
+dos2unix (6.0.2-1) unstable; urgency=low
+
+  * New upstream release.
+    - The locale encoding detection has been fixed when NLS was disabled.
+    - Display line number when a binary symbol is found.
+    - Update makefiles for Watcom C, and added a new one for OS/2.
+  * debian/clean
+    - Drop wildcard from dos2unix.htm*, drop Spanish man/es/* line.
+  * debian/compat
+    - Update to 9.
+  * debian/docs
+     - Clean up for current release.
+  * debian/control
+    - (Build-Depends): Add dpkg-dev for hardened flags.
+      Update to debhelper 9.
+  * debian/copyright
+    - Update to Format 1.0
+  * debian/rules
+    - Use hardened build flags
+      http://wiki.debian.org/ReleaseGoals/SecurityHardeningBuildFlags
+    - (dh_installdocs): Remove. Not needed after debian/docs clean up.
+  * debian/watch
+    - Remove extra comment.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Fri, 14 Sep 2012 07:12:23 +0300
+
+dos2unix (6.0-1) unstable; urgency=low
+
+  * New upstream release, see changes:
+    http://freecode.com/projects/dos2unix#release_344448
+  * debian/changelog
+    - (override_dh_auto_build): Use LDFLAGS_USER to pass hardening flags.
+  * debian/watch
+    - Remove unnneeded comment.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Mon, 07 May 2012 08:08:37 +0300
+
+dos2unix (5.3.3-2) unstable; urgency=low
+
+  * debian/clean
+    - Delete Esperanto manual page (unknown locale).
+    - Don't remove original po/*.pot files.
+  * debian/control
+    - (Build-Depends): Rm dpkg-dev; not needed with debhelper 9.
+    - (Standards-Version): Update to 3.9.3.1.
+  * debian/rules
+    - Remove unnecessary targets. Preserve original po/*.pot file.
+    - Enable all hardening flags.
+    - Use DEB_*_MAINT_* variables.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Fri, 23 Mar 2012 04:43:55 -0400
+
+dos2unix (5.3.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/clean
+    - Adjust po and *.html files.
+  * debian/control
+    - (Build-Depends): Rm dpkg-dev; not needed with debhelper 9.
+    - (Standards-Version): Update to 3.9.3.1.
+  * debian/copyright
+    - Update to format 1.0.
+  * debian/docs
+    - Clean up unnecessary files.
+  * debian/rules
+    - Enable all hardening flags.
+    - Delete buildflags.mk; not needed with debhelper 9.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Sun, 11 Mar 2012 06:41:52 -0400
+
+dos2unix (5.3.2-2) unstable; urgency=low
+
+  * debian/compat
+    - Update to 9.
+  * debian/control
+    - (Build-Depends): Update to debhelper 9, dpkg-dev 1.16.1.
+  * debian/rules
+    - (include): Add buildflags.mk.
+    - (override_dh_auto_build): New. Use hardened CFLAGS (release goal).
+      http://wiki.debian.org/ReleaseGoals/SecurityHardeningBuildFlags
+
+ -- Jari Aalto <jari.aalto@cante.net>  Sun, 05 Feb 2012 21:20:34 +0200
+
+dos2unix (5.3.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/copyright
+    - Update year.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Sat, 28 Jan 2012 08:19:20 +0200
+
+dos2unix (5.3.1-1) unstable; urgency=low
+
+  * New upstream release.
+    - The unix2dos .mo files are gone. The programs shares the dos2unix
+      .mo files.
+  * debian/copyright
+    - (Format): Update URL (lintian).
+  * debian/debian-save-restore.mk
+    - New file.
+  * debian/rules
+    - (override_dh_clean): Clean up generated files.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Fri, 07 Oct 2011 16:10:07 +0300
+
+dos2unix (5.3-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control
+    - (Standards-Version): update to 3.9.2.
+  * debian/copyright:
+    - Update to DEP5.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Wed, 27 Apr 2011 19:04:10 +0300
+
+dos2unix (5.2.1-1) unstable; urgency=low
+
+  * New upstream release
+    - Large file support is enabled by default (Close: #614360).
+    - Esperanto eo-x locate is no longer generated by default.
+  * debian/clean
+    - New file. Delete generated files.
+  * debian/control
+    - (Build-Depends): remove ghostscript; optional in latest release.
+  * debian/debian-save-restore.mk
+    - Remove. No longer needed.
+  * debian/rules
+    - (override_dh_auto_install): remove calls no longer needed.
+    - Remove file-state-* macros. New release no longer ships copies
+      of generated files.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Sat, 05 Mar 2011 11:37:15 +0200
+
+dos2unix (5.2-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Thu, 01 Feb 2011 06:59:43 +0200
+
+dos2unix (5.1.1-2) unstable; urgency=low
+
+  * debian/control:
+    - (Description): Improve paragraphs. Patch thanks to Reuben Thomas
+      <rrt@sc3d.org> (Closes: #605383).
+
+ -- Jari Aalto <jari.aalto@cante.net>  Tue, 30 Nov 2010 00:18:44 +0200
+
+dos2unix (5.1.1-1) unstable; urgency=low
+
+  * New upstream release.
+    - Move to packaging format "3.0 (quilt)"
+  * debian/compat
+    - Update to 8.
+  * debian/control
+    - (Build-Depends): Update to debhelper 8.
+    - (Standards-Version): Update to 3.9.1.
+    - (dos2unix::Conflicts): Remove Debian *-2 version specifier from tofrodos.
+  * debian/dos2unix.lintian-overrides
+    - New.
+  * debian/rules
+    - Remove targets handled by dh(1).
+  * debian/source/format
+   - New file.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Mon, 15 Nov 2010 14:38:16 +0200
+
+dos2unix (5.0-3) unstable; urgency=low
+
+  * UNRELEASED
+  * debian/control:
+    - (Description): Update to mention all the four utilities.
+  * debian/copyright
+    - (Lecense): Chagne id from MIT/X to FreeBSD. Add URL.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Wed, 17 Mar 2010 09:26:12 +0200
+
+dos2unix (5.0-2) unstable; urgency=medium
+
+  * debian/control
+    - (Conflicts): add tofrodos (<< 1.7.8.debian.1-2) to handle
+      upgrades (serious; Closes: #573495). See
+      http://packages.qa.debian.org/t/tofrodos/news/20100121T214032Z.html
+
+ -- Jari Aalto <jari.aalto@cante.net>  Fri, 12 Mar 2010 11:17:24 +0200
+
+dos2unix (5.0-1) unstable; urgency=low
+
+  * New upstream release.
+  * debian/control
+    - (Build-Depends): update to debhelper 7.1.
+  * debian/debian-save-restore.mk
+    - New file.
+  * debian/rules
+    - (.PHONY::binary): remove undefined target binary-indep.
+  * debian/watch
+    - Adjust URL and regexp.
+
+ -- Jari Aalto <jari.aalto@cante.net>  Tue, 09 Mar 2010 21:09:55 +0200
+
+dos2unix (4.1.2-1) unstable; urgency=low
+
+  * Initial release (Closes: #561307)
+
+ -- Jari Aalto <jari.aalto@cante.net>  Mon, 15 Feb 2010 00:04:25 +0200
